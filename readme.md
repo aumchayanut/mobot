@@ -11,7 +11,7 @@ This repository contains a ROS2 package for the multi-TurtleBot3 Play Tag game. 
 1. Chayanut Rassameecharoenchai 62340500012
 2. Nachata Vongweeratorn 62340500030
 3. Patcharapol Saechan 62340500036
-4. Worameth Witanakorn 62340500045
+4. Worameth Wittanakorn 62340500045
 
 ## Functional requirements
 - The thief must be able to run away from the police.
@@ -45,11 +45,22 @@ ros2 launch custom_nav game_controller_launch.py
 ```
 At this step, rviz could shows the map that you have. Then, your /tf topic could show like this
 ![mobot](images/S__41312259.jpg)
-It's mean amcl already know the robot pose in map, so you can do the next step. Calling game controller service by call 'gamestate.sh'
+It's mean amcl already know the robot pose in map, then you can monitor by run file
+```
+ros2 run custom_nav monitor.py
+```
+When you want to start the game, you can calling game controller service by call 'gamestate.sh' then the game will start automatically.
 ```
 ./gamestate.sh
 ```
-The game will start automatically. You can also interrupted to open the door by calling service in 'door.sh'
+You can edit file in it by config your argument in code
+```
+ros2 service call /Monitorstart_service custom_nav/srv/Monitorcontinuous "{gamestate: 1, gametime: 120}"
+```
+gamestate mean 0 = stop , 1 = start
+gametime mean how much time in game
+
+You can also interrupted to open the door by calling service in 'door.sh'
 ```
 ./door.sh
 ```
