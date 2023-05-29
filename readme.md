@@ -64,3 +64,8 @@ You can also interrupted to open the door by calling service in 'door.sh'
 ```
 ./door.sh
 ```
+## Demo
+Demo 1 <br>
+https://drive.google.com/file/d/1Mgswg0VnuRLMHxk2QywMWlFtbg7Sw9-D/view?usp=sharing <br>
+Demo 2 <br>
+https://drive.google.com/file/d/1uP8dIl8068u43dEB513B1C0PbhLDaP-h/view?usp=sharing
